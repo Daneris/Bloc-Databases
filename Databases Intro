@@ -1,0 +1,138 @@
+
+### Exercises
+
+Create a new repository on GitHub to hold your assignments for the Databases module. Create a new branch for Checkpoint  Submit your answers.
+
+>What data types do each of these values represent?
+    
+
+*"A Clockwork Orange"
+    A string
+    
+
+*42
+Integer
+ 
+
+*09/02/1945
+Date
+
+
+*98.7
+    Float
+
+
+*$15.99
+   currency
+
+>Explain when a database would be used. Explain when a text file would be used.
+    
+A database should be utilized when a project requires that multiple applications access the data.
+
+We need a way to store data that makes it easy to search for specific data, that can handle multiple applications accessing the data, and that persists beyond the end of a particular application process.
+
+
+>Describe one difference between SQL and other programming languages.
+
+SQL is declarative rather than procedural. This means that we don't have to write functions in order to find what we are searching for.
+
+
+
+
+>In your own words, explain how the pieces of a database system fit together at a high level.
+    
+
+A database is an application that allows users to manage data via an interview. Databases store data in a binary file. Within the files are data structures that enable the system to read, and write data.
+
+The data is stored using a table structure. The same tables that we are familiar with composed of columns, rows, and cells.
+
+
+
+>Explain the meaning of  **table**,  **row**,  **column**, and  **value**.
+    
+Data is stored within a database using a table structure. The table is composed of columns, rows, and values. The values are the data within each cell. The data within the table is structured so that each column contains a particular set of values, so in a column labeled amount you would only expect integer or float values within the cells in each row. You would not expect strings.
+
+
+>List three data types that can be used in a table.
+
+
+Float, integer, and string.
+
+
+>Given this  [`payments`]  table, provide an English description of the following queries and include their results:
+    
+ ```
+         SELECT date, amount
+     FROM payments;
+
+     SELECT amount
+     FROM payments
+     WHERE amount > 500;
+
+     SELECT *
+     FROM payments
+     WHERE payee = 'Mega Foods';   
+ ```
+    
+
+First query:
+
+From payments, select two columns date and amount.
+
+
+```
+ ('2016-05-01', 1500.00),
+  ('2016-05-10', 37.00),
+  ('2016-05-15',124.93),
+  ('2016-05-23',54.72);
+```
+
+
+
+Second query:
+
+From payments select one column amount, where amount is greater than 500.
+
+```
+ (1500.00),
+
+```
+
+
+
+Third query:
+
+From payments select All columns, where payee is Mega Food.
+
+
+```
+
+  ('2016-05-15', 'Mega Foods',  124.93,  'Groceries'),
+
+``` 
+
+
+
+>Given this  [`users`] table, write SQL queries using the following criteria and include the output:
+    
+    -   The email and sign-up date for the user named DeAndre Data.
+
+SELECT email, signup
+FROM users  
+WHERE name = 'DeAndre Data';
+
+
+
+    -   The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+
+
+SELECT userid
+FROM users  
+WHERE email = "aleesia.algorithm@uw.edu'';
+
+
+    -   All the columns for the user ID equal to 4.
+
+SELECT *
+FROM users  
+WHERE userid = 4;
