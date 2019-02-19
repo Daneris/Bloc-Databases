@@ -123,12 +123,23 @@ WHERE name = 'DeAndre Data';
 
 
 
-    -   The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+Table:
 
+email                | signup
+datad@comcast.net'   '2008-01-20'
+
+
+
+    -   The user ID for the user with email 'aleesia.algorithm@uw.edu'.
 
 SELECT userid
 FROM users  
 WHERE email = "aleesia.algorithm@uw.edu'';
+
+
+Table:
+userid |
+ 1
 
 
     -   All the columns for the user ID equal to 4.
@@ -136,3 +147,7 @@ WHERE email = "aleesia.algorithm@uw.edu'';
 SELECT *
 FROM users  
 WHERE userid = 4;
+
+
+userid   | name                   | email                     |  signup
+4        'Aleesia Algorithm'  'aleesia.algorithm@uw.edu'          '2014-10-24'
